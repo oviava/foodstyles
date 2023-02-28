@@ -2,7 +2,9 @@
   "name": "foodstyles",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many --target=serve --projects=api,fs --parallel"
+  },
   "private": true,
   "devDependencies": {
     "@nrwl/cypress": "^15.7.2",

@@ -5,11 +5,7 @@ import { Todo, useTodoApi } from '../app/useTodoApi';
 
 export const TodoForm = () => {
   const { createTodo } = useTodoApi();
-  const {
-    data = [],
-    isLoading,
-    mutateAsync,
-  } = useMutation('todo', createTodo, {
+  const { isLoading, mutateAsync } = useMutation('todo', createTodo, {
     // optimistic update
     onMutate: async (newTodo) => {
       await queryClient.cancelQueries(['todos']);
@@ -59,6 +55,7 @@ export const TodoForm = () => {
         type="text"
         placeholder="Add a new todo"
         onKeyDown={handleKeyDown}
+        disabled={isLoading}
       />
     </div>
   );

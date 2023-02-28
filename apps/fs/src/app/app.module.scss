@@ -3,8 +3,14 @@
   src: url('../assets/MarkPro-Book.woff') format('woff');
 }
 
-h1 {
+body {
   font-family: 'MarkPro-Book';
+  font-size: 16px;
+  color: #1f2a4b;
+  margin: 0;
+}
+
+h1 {
   font-size: 24px;
   color: #1f2a4b;
   margin-bottom: 25px;
@@ -21,8 +27,6 @@ h1 {
 .todoList {
   display: flex;
   flex-direction: column;
-  font-family: 'MarkPro-Book';
-  font-size: 16px;
   color: #1f2a4b;
   margin-bottom: 50px;
 }
